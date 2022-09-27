@@ -1,0 +1,26 @@
+# Dev workflow
+alias lazy="lazygit"
+alias vim="nvim"
+alias vi="nvim"
+alias v="nvim"
+alias nightly="bob use nightly"
+
+# Git
+alias ginit="git init"
+
+# Create the dir and cd into it
+function create_dir_and_cd() {
+  if [[ -z "$1" ]]; then
+    echo "Usage: mkc <path>"
+  else
+    mkdir -p "$1"
+    cd "$1"
+  fi
+}
+alias mkc="create_dir_and_cd "
+
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias ......="cd ../../../../.."

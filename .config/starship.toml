@@ -1,0 +1,121 @@
+# Prompt: param 2 └─
+[character]
+success_symbol = " [╰─λ](bold #b4f9f8)"
+error_symbol = " [](bold #f7768e)"
+
+# Third param
+[directory]
+format = "[$path]($style)[$lock_symbol]($lock_style) "
+style = "fg:#7aa2f7"
+truncation_length = 3
+truncate_to_repo = false
+truncation_symbol = "../"
+
+[git_branch]
+format = "[ ](fg:#FFFFFF)[$symbol$branch ]($style)"
+symbol = " "
+style = "bold #C678DD"
+
+[git_status]
+format ='([\[$all_status$ahead_behind\] ]($style))'
+conflicted = "="
+ahead =	"[  $count ](fg:#9ece6a)"
+behind = "[  $count ](fg:#f7768e)"
+diverged = "⇕ ${ahead_count} ${behind_count}"
+untracked = "[ ?$count ](fg:#2ac3de)"
+modified = "[ $count ](fg:#9ece6a)"
+staged = "[ $count ](fg:#2ac3de)"
+renamed = "[ »$count ](fg:#bb9af7)"
+deleted = "[ ✘$count ](fg:#f7768e)"
+disabled = false
+style = "fg:#ABB2BF"
+
+[cmd_duration]
+disabled = true
+
+[docker_context]
+disabled=true
+symbol = " "
+
+# [c]
+# disabled=true
+
+[conda]
+disabled=true
+symbol = " "
+
+[dart]
+disabled=true
+symbol = " "
+
+[package]
+disabled=true
+symbol = " "
+
+[perl]
+disabled=true
+symbol = " "
+
+[php]
+disabled=true
+symbol = " "
+
+
+[ruby]
+disabled=true
+symbol = " "
+
+[java]
+disabled=true
+symbol = " "
+
+[lua]
+disabled=true
+symbol = " "
+style = "bold blue"
+
+[nodejs]
+disabled=true
+
+[swift]
+disabled=true
+symbol = "ﯣ "
+
+[julia]
+disabled=true
+format = "[$symbol$version]($style) "
+symbol = "ஃ "
+style = "bold green"
+
+[python]
+disabled=true
+format = 'via [${symbol}${pyenv_prefix}${version}( $virtualenv)]($style) '
+symbol = " "
+style = "italic Blue"
+
+[rust]
+disabled=true
+format = "[$symbol$version]($style) "
+# style = "bold green"
+symbol = " "
+
+# add_newline = false
+
+
+# format = "$directory$git_branch$git_status$memory_usage$character"
+
+# [directory]
+# format = "[$path]($style)[  ](bold blue)[$read_only]($read_only_style) "
+# truncation_length = 1
+# truncate_to_repo =false
+# home_symbol = "  "
+
+# [character]
+# success_symbol = "[»](green)"
+# error_symbol = "[»](red)"
+# vicmd_symbol = "[«](green)"
+
+# [git_branch]
+# format = "[$symbol$branch ]($style)"
+# symbol = " "
+# style = "bold #C678DD"

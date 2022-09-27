@@ -1,0 +1,20 @@
+notARepository: "create"
+
+os:
+  editCommand: "nvim" # see 'Configuring File Editing' section
+  editCommandTemplate: "{{editor}} {{filename}}"
+  openCommand: ""
+keybinding:
+  universal:
+    pushFiles: "p"
+    pullFiles: "P"
+customCommands:
+  - key: <c-q>
+    command: 'git commit -a --allow-empty-message -m ""'
+    context: global
+    description: Empty commit
+    loadingText: Pushing...
+  - key: "a"
+    command: "git {{if .SelectedFile.HasUnstagedChanges}} add {{else}} reset {{end}} {{.SelectedFile.Name}}"
+    context: "files"
+    description: "toggle file staged"

@@ -1,0 +1,9 @@
+lastupdatecheck: 0
+recentrepos:
+- /home/bryant/.config/nvim
+- /home/bryant/dev/forks/polybar
+- /home/bryant/.config
+startuppopupversion: 5
+customcommandshistory:
+- q
+hidecommandlog: false
