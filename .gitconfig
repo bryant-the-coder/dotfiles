@@ -1,0 +1,22 @@
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[user]
+	name = bryant-the-coder
+	email = foobryant99@gmail.com
+[color]
+	ui = true
+[core]
+	editor = nvim
+[alias]
+    master = !git fetch upstream && git merge upstream/master
+    main = !git fetch upstream && git merge upstream/main
+    empty = !git add -A && git commit -m "empty" --allow-empty && git push
+	pr = "!f() { git fetch -fu ${2:-$(git remote |grep ^upstream || echo origin)} refs/pull/$1/head:pr/$1 && git checkout pr/$1; }; f"
+	pr-clean = "!git for-each-ref refs/heads/pr/* --format=\"%(refname)\" | while read ref ; do branch=${ref#refs/heads/} ; git branch -D $branch ; done"
+[init]
+	defaultBranch = main
+[credential]
+	helper = cache
