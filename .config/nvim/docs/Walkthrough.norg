@@ -1,0 +1,105 @@
+@document.meta
+    title: Walkthrough
+    description:
+    authors: Bryant
+    categories:
+    created: 2022-05-14
+    version: 0.0.11
+@end
+
+= TOC
+
+* File Structure
+@code
+├───after
+│   ├───ftplugin
+│   │       cpp.lua
+│   │       norg.lua
+│   │
+│   └───queries
+│       ├───cpp
+│       │       highlights.scm
+│       │
+│       └───luaa
+│               highlights.scm
+│
+├───docs
+│       Walkthrough.norg
+│
+├───lang
+│       Main.cpp
+│       Main.lua
+│       Main.rs
+│
+├───lua
+│   ├───core
+│   │       autocommands.lua
+│   │       disable_builtin.lua
+│   │       mappings.lua
+│   │       plugins.lua
+│   │       settings.lua
+│   │       utils.lua
+│   │
+│   ├───custom
+│   │       dashboard.lua
+│   │       overrides.lua
+│   │       statusline.lua
+│   │
+│   └───modules
+│       ├───completion
+│       │       autopairs.lua
+│       │       cmp.lua
+│       │       snippets.lua
+│       │
+│       ├───editor
+│       │       comment.lua
+│       │       impatient.lua
+│       │       neorg.lua
+│       │
+│       ├───files
+│       │       harpoon.lua
+│       │       nvim-tree.lua
+│       │       telescope.lua
+│       │
+│       ├───lang
+│       │       neogen.lua
+│       │       null-ls.lua
+│       │       treesitter.lua
+│       │       trouble.lua
+│       │
+│       ├───lsp
+│       │       config.lua
+│       │       init.lua
+│       │       installer.lua
+│       │       on_attach.lua
+│       │
+│       ├───tools
+│       │       colorizer.lua
+│       │       fidget.lua
+│       │       gitsigns.lua
+│       │       toggleterm.lua
+│       │
+│       └───ui
+│               bufferline.lua
+│               indent.lua
+│               notify.lua
+│               theme.lua
+│
+├───luasnippets
+│       cpp.lua
+│       html.lua
+│       js.lua
+│       lua.lua
+│       norg.lua
+@end
+
+** `lua/core/`
+   - Dir where I put the core files
+** `lua/modules/`
+   - Dir for plugins config
+** `lua/custom`
+   - Dir for custom configs
+** `luasnippets/`
+   - Snippets dir
+** `lang/`
+   - Users can test the lsp,highlights, formatter, cmp, snippets in this dir
