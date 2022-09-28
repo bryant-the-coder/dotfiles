@@ -186,6 +186,14 @@ return require("packer").startup {
             disable = plugins.neorg_telescope,
         }
 
+        use {
+            "edluffy/hologram.nvim",
+            config = function()
+                require "modules.editor.hologram"
+            end,
+            disable = plugins.hologram,
+        }
+
         -----------------------------------
         --              Files            --
         -----------------------------------

@@ -29,6 +29,7 @@ config.plugins = {
     neorg = false,
     neorg_kanban = false,
     neorg_telescope = true,
+    hologram = false,
 
     -----------------------------------
     --              Files            --
