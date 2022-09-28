@@ -129,7 +129,7 @@ return require("packer").startup {
             cmd = { "MarkdownPreview", "MarkdownPreviewStop", "MarkdownPreviewToggle" },
             config = function()
                 -- Open the default browser
-                vim.g.mkdp_browser = ""
+                vim.g.mkdp_browser = "firefox"
             end,
         }
 
