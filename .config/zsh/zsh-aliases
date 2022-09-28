@@ -7,6 +7,7 @@ alias nightly="bob use nightly"
 
 # Git
 alias ginit="git init"
+alias dotgit='git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 
 # Create the dir and cd into it
 function create_dir_and_cd() {
@@ -24,3 +25,26 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 alias ......="cd ../../../../.."
+
+# Use exa to list dir
+# If exa is not found, use ls
+# https://github.com/NTBBloodbath/dotfiles/blob/main/.config/zsh/aliases#L49
+if [[ -x "$(command -v exa)" ]]; then
+  _exa_core_args="exa --icons --group-directories-first"
+  alias ls="$_exa_core_args"
+  alias la="$_exa_core_args --all --ignore-glob=\".git\""
+  alias ll="$_exa_core_args --long --grid --group --accessed --modified --created --header"
+  alias lsa="$_exa_core_args --long --grid --group --accessed --modified --created --header --all"
+  alias lt="$_exa_core_args --all --tree --level=3 --ignore-glob=\".git|.cache|node_modules\""
+else
+  # -v          : natural sort of (version) numbers within text
+  # -p          : append '/' indicator to directories
+  # -N          : print entry names without quoting
+  # --file-type : append special indicators based on filetpe (exluding '*' for binaries/executables)
+  _ls_core_args="ls --color=auto -vpN --file-type --group-directories-first"
+  alias ls="$_ls_core_args"
+  alias la="$_ls_core_args --almost-all -I \".git\""
+  alias ll="$_ls_core_args -ltshc --author"
+  alias lsa="$_ls_core_args -ltshc --author --almost-all -I \".git\""
+  alias lt="tree -L 3 -I \".git|.cache|node_modules\""
+fi

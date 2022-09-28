@@ -83,6 +83,8 @@ plugins=(
     zsh-autosuggestions
     zsh-syntax-highlighting
     history-substring-search
+    pip
+    poetry
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -93,7 +95,7 @@ source "$ZDOTDIR/zsh-functions"
 zsh_add_file "zsh-aliases"
 zsh_add_file "zsh-exports"
 
-# export MANPATH="/usr/local/man:$MANPATH"
+export MANPAGER="nvim +Man!"
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8

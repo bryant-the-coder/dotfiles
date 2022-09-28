@@ -1,4 +1,4 @@
-#files: 974	version: 5.8.1
+#files: 979	version: 5.8.1
 
 _comps=(
 '-' '_precommand'
@@ -154,6 +154,7 @@ _comps=(
 'caffeinate' '_caffeinate'
 'cal' '_cal'
 'calendar' '_calendar'
+'cargo' '_cargo'
 'cat' '_cat'
 'catchsegv' '_precommand'
 'catimg' '_catimg'
@@ -376,6 +377,7 @@ _comps=(
 'eview' '_vim'
 'evim' '_vim'
 'evince' '_evince'
+'exa' '_exa'
 'exec' '_exec'
 'expand' '_unexpand'
 'explodepkg' '_pkgtool'
@@ -1045,6 +1047,13 @@ _comps=(
 'pinfo' '_texinfo'
 'ping' '_ping'
 'ping6' '_ping'
+'pip' '_pip'
+'pip2' '_pip'
+'pip-2.7' '_pip'
+'pip3' '_pip'
+'pip-3.2' '_pip'
+'pip-3.3' '_pip'
+'pip-3.4' '_pip'
 'piuparts' '_piuparts'
 'pkg' '_pkg5'
 'pkg_add' '_bsd_pkg'
@@ -1225,6 +1234,7 @@ _comps=(
 'run-help' '_run-help'
 'rup' '_hosts'
 'rusage' '_precommand'
+'rustup' '_rustup'
 'rview' '_vim'
 'rvim' '_vim'
 'rwho' '_hosts'
@@ -1681,6 +1691,7 @@ _comps=(
 'yum' '_yum'
 'yumdb' '_yum'
 'zargs' '_zargs'
+'zathura' '_zathura'
 'zcalc' '_zcalc'
 '-zcalc-line-' '_zcalc_line'
 'zcat' '_zcat'
@@ -1841,15 +1852,16 @@ bindkey '^[,' _history-complete-newer
 bindkey '^[/' _history-complete-older
 bindkey '^[~' _bash_complete-word
 
-autoload -Uz _zscroll _alacritty _bluetoothctl _bootctl _busctl \
-            _bwrap _catimg _coredumpctl _curl _fd \
-            _firewalld _flameshot _flatpak _hostnamectl _journalctl \
-            _kernel-install _libinput _localectl _loginctl _machinectl \
-            _meson _mpv _networkctl _ninja _playerctl \
-            _podman _polybar _polybar_msg _resolvectl _sd_hosts_or_user_at_host \
-            _sd_machines _sd_outputmodes _sd_unit_files _systemctl _systemd \
-            _systemd-analyze _systemd-delta _systemd-inhibit _systemd-nspawn _systemd-path \
-            _systemd-run _systemd-tmpfiles _timedatectl _udevadm _yt-dlp \
+autoload -Uz _pip _cargo _rustup _zscroll _alacritty \
+            _bluetoothctl _bootctl _busctl _bwrap _catimg \
+            _coredumpctl _curl _exa _fd _firewalld \
+            _flameshot _flatpak _hostnamectl _journalctl _kernel-install \
+            _libinput _localectl _loginctl _machinectl _meson \
+            _mpv _networkctl _ninja _playerctl _podman \
+            _polybar _polybar_msg _resolvectl _sd_hosts_or_user_at_host _sd_machines \
+            _sd_outputmodes _sd_unit_files _systemctl _systemd _systemd-analyze \
+            _systemd-delta _systemd-inhibit _systemd-nspawn _systemd-path _systemd-run \
+            _systemd-tmpfiles _timedatectl _udevadm _yt-dlp _zathura \
             _a2ps _a2utils _aap _abcde _absolute_command_paths \
             _ack _acpi _acpitool _acroread _adb \
             _add-zle-hook-widget _add-zsh-hook _alias _aliases _all_labels \
@@ -2042,4 +2054,4 @@ typeset -gUa _comp_assocs
 _comp_assocs=( '' )
 
 #omz revision: 7dcabbe6826073ef6069c8a4b6f9a943f00d2df0
-#omz fpath: /home/bryant/.oh-my-zsh/plugins/history-substring-search /home/bryant/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting /home/bryant/.oh-my-zsh/custom/plugins/zsh-autosuggestions /home/bryant/.oh-my-zsh/plugins/fzf /home/bryant/.oh-my-zsh/plugins/git /home/bryant/.oh-my-zsh/functions /home/bryant/.oh-my-zsh/completions /home/bryant/.oh-my-zsh/cache/completions /usr/local/share/zsh/site-functions /usr/share/zsh/site-functions /usr/share/zsh/5.8.1/functions
+#omz fpath: /home/bryant/.oh-my-zsh/plugins/poetry /home/bryant/.oh-my-zsh/plugins/pip /home/bryant/.oh-my-zsh/plugins/history-substring-search /home/bryant/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting /home/bryant/.oh-my-zsh/custom/plugins/zsh-autosuggestions /home/bryant/.oh-my-zsh/plugins/fzf /home/bryant/.oh-my-zsh/plugins/git /home/bryant/.oh-my-zsh/functions /home/bryant/.oh-my-zsh/completions /home/bryant/.oh-my-zsh/cache/completions /usr/local/share/zsh/site-functions /usr/share/zsh/site-functions /usr/share/zsh/5.8.1/functions
