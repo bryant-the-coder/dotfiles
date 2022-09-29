@@ -516,6 +516,7 @@ return require("packer").startup {
             config = function()
                 require "modules.tools.dapui"
             end,
+            after = "nvim-dap",
             disable = plugins.dapui,
         }
 
@@ -524,11 +525,13 @@ return require("packer").startup {
             config = function()
                 require "modules.tools.dap"
             end,
+            after = "nvim-lspconfig",
             disable = plugins.dap,
         }
 
         use {
             "mfussenegger/nvim-dap-python",
+            after = "nvim-dap",
             disable = plugins.dap_python,
         }
 

@@ -5,7 +5,7 @@ local g = vim.g
 local o = vim.opt
 
 --Cursor & cursorline
-o.guicursor = "n-v-c-sm:block,ci-ve:ver25,r-cr-o:hor20,i:block-blinkwait700-blinkoff400-blinkon250-Cursor/lCursor"
+-- o.guicursor = "n-v-c-sm:block,ci-ve:ver25,r-cr-o:hor20,i:block-blinkwait700-blinkoff400-blinkon250-Cursor/lCursor"
 -- o.guicursor = "n-v-c-sm:block-Cursor,i-ci-ve:ver25-Cursor-blinkwait300-blinkon500-blinkoff300,r-cr-o:hor20"
 o.cursorline = true
 o.cursorlineopt = { "number" } -- Highlighting the number where the cursor is on
