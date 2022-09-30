@@ -194,6 +194,15 @@ return require("packer").startup {
             disable = plugins.hologram,
         }
 
+        use {
+            "akinsho/toggleterm.nvim",
+            keys = "<c-t>",
+            tag = "*",
+            config = function()
+                require "modules.editor.toggleterm"
+            end,
+        }
+
         -----------------------------------
         --              Files            --
         -----------------------------------
@@ -585,17 +594,6 @@ return require("packer").startup {
                 require "modules.tools.fidget"
             end,
             disable = plugins.fidget,
-        }
-
-        -- Terminal
-        use {
-            "akinsho/toggleterm.nvim",
-            keys = "<c-b>",
-            module = { "toggleterm" },
-            config = function()
-                require "modules.tools.toggleterm"
-            end,
-            disable = plugins.toggleterm,
         }
 
         -- Share code

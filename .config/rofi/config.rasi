@@ -14,9 +14,13 @@ configuration {
 @theme "/dev/null"
 
 * {
-  bg: #0A1114;
-  fg: #dadada;
-  al: #404749;
+  /* bg: #0A1114; */
+  /* fg: #dadada; */
+  /* al: #404749; */
+
+  bg: #1e1e2e;
+  fg: #cdd6f4;
+  al: #585b70;
   border-radius: 0.2em;
   background-color: @bg;
   text-color: @fg;
