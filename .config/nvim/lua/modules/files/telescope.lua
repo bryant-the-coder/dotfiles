@@ -25,7 +25,7 @@ telescope.setup {
         -- Transparency settings
         -- winblend = 20,
 
-        find_command = { "rg", "--no-heading", "--with-filename", "--line-number", "--column", "--smart-case" },
+        find_command = { "rg", "-L", "--no-heading", "--with-filename", "--line-number", "--column", "--smart-case" },
         prompt_prefix = "  ",
         selection_caret = "  ",
         entry_prefix = "  ",
