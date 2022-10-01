@@ -731,6 +731,5 @@ return require("packer").startup {
             end, ]]
         },
         -- Uncomment this if your pc slows down
-        -- max_jobs = 6,
     },
 }
