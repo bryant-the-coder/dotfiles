@@ -203,6 +203,29 @@ map("n", "<space>lh", function()
     require("lsp-inlayhints").toggle()
 end)
 
+-- Nvim-dap
+-- See https://github.com/mfussenegger/nvim-dap/blob/master/doc/dap.txt#L419 for more info
+map("n", "<leader>dc", function()
+    require("dap").continue()
+end)
+map("n", "<leader>dso", function()
+    require("dap").step_over()
+end)
+map("n", "<leader>dsi", function()
+    require("dap").step_into()
+end)
+map("n", "<leader>dst", function()
+    require("dap").step_out()
+end)
+map("n", "<leader>b", function()
+    require("dap").toggle_breakpoint()
+end)
+
+-- Nvim-dap-ui
+map("n", "<leader>dt", function()
+    require("dapui").toggle()
+end)
+
 -- Packer
 map("n", "<leader>pi", "<cmd>PackerInstall<CR>")
 map("n", "<leader>pu", "<cmd>PackerUpdate<CR>")
