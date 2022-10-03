@@ -63,6 +63,12 @@ return require("packer").startup {
             disable = plugins.nui,
         }
 
+        use {
+            "catppuccin/nvim",
+            as = "catppuccin",
+            disable = plugins.catppuccin,
+        }
+
         -----------------------------------
         --           Completion          --
         -----------------------------------
