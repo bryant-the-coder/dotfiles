@@ -85,15 +85,21 @@ style = "bold green"
 
 [python]
 disabled=false
-format = 'via [${symbol}${pyenv_prefix}${version}( $virtualenv)]($style) '
+# format = 'via [${symbol}${pyenv_prefix}${version}( $virtualenv)]($style) '
+format = 'via [${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
 symbol = " "
-style = "italic yellow"
+style = "italic bold yellow"
 
 [rust]
 disabled=false
 format = "on [$symbol$version]($style) "
 # style = "bold green"
 symbol = " "
+
+[cmake]
+disabled = false
+format = "via [$symbol($version )]($style)"
+style = "bold red"
 
 # add_newline = false
 
