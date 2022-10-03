@@ -20,6 +20,21 @@ return {
         t { "***** " },
         i(1),
     }),
+    s(
+        "@lang",
+        fmt(
+            [[
+            @code {}
+            {}
+            @end
+            ]],
+            {
+                -- i(1) is at nodes[1], i(2) at nodes[2].
+                i(1, "Language"),
+                i(2, "Code"),
+            }
+        )
+    ),
     s({ trig = "ses" }, {
         t { "Session " },
         i(1),
