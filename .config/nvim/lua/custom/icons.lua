@@ -1,179 +1,222 @@
-local M = {}
-
--- Thanks to max and vsedov
-M.lspkind = {
-    Class = "  ",
-    Color = "  ",
-    Constant = "  ",
-    Constructor = "  ",
-    Enum = " 了",
-    EnumMember = "  ",
-    Event = "  ",
-    Field = " ﰠ ",
-    -- File = " ",
-    File = "  ",
-    Folder = "  ",
-    Function = "  ",
-    Interface = " ﰮ ",
-    Keyword = "  ",
-    Method = " ƒ ",
-    Module = "  ",
-    Operator = "  ",
-    Property = "  ",
-    Reference = " ",
-    -- Snippet = "  ",
-    -- Snippet = "  ",
-    -- Snippet = "  ",
-    -- Snippet = " >",
-    Snippet = "  ",
-    Struct = " ",
-    Text = "  ",
-    TypeParameter = "",
-    Unit = " 塞",
-    Value = "  ",
-    Variable = "  ",
-}
-
-M.devicons = {
-    default_icon = {
-        icon = "",
-        name = "Default",
-    },
-
-    c = {
-        icon = "",
-        name = "c",
-    },
-
-    css = {
-        icon = "",
-        name = "css",
-    },
-
-    deb = {
-        icon = "",
-        name = "deb",
-    },
-
-    Dockerfile = {
-        icon = "",
-        name = "Dockerfile",
-    },
-
-    html = {
-        icon = "",
-        name = "html",
-    },
-
-    jpeg = {
-        icon = "",
-        name = "jpeg",
-    },
-
-    jpg = {
-        icon = "",
-        name = "jpg",
-    },
-
-    js = {
-        icon = "",
-        name = "js",
-    },
-
-    kt = {
-        icon = "󱈙",
-        name = "kt",
-    },
-
-    lock = {
-        icon = "",
-        name = "lock",
-    },
-
-    lua = {
-        icon = "",
-        name = "lua",
-    },
-
-    mp3 = {
-        icon = "",
-        name = "mp3",
-    },
-
-    mp4 = {
-        icon = "",
-        name = "mp4",
-    },
-
-    out = {
-        icon = "",
-        name = "out",
-    },
-
-    png = {
-        icon = "",
-        name = "png",
-    },
-
-    py = {
-        icon = "",
-        name = "py",
-    },
-
-    ["robots.txt"] = {
-        icon = "ﮧ",
-        name = "robots",
-    },
-
-    toml = {
-        icon = "",
-        name = "toml",
-    },
-
-    ts = {
-        icon = "ﯤ",
-        name = "ts",
-    },
-
-    ttf = {
-        icon = "",
-        name = "TrueTypeFont",
-    },
-
-    rb = {
-        icon = "",
-        name = "rb",
-    },
-
-    rpm = {
-        icon = "",
-        name = "rpm",
-    },
-
-    vue = {
-        icon = "﵂",
-        name = "vue",
-    },
-
-    woff = {
-        icon = "",
-        name = "WebOpenFontFormat",
-    },
-
-    woff2 = {
-        icon = "",
-        name = "WebOpenFontFormat2",
-    },
-
-    xz = {
-        icon = "",
-        name = "xz",
-    },
-
-    zip = {
-        icon = "",
-        name = "zip",
-    },
-}
-
-return M
+-- https://github.com/microsoft/vscode/blob/main/src/vs/base/common/codicons.ts
+-- go to the above and then enter <c-v>u<unicode> and the symbold should appear
+-- or go here and upload the font file: https://mathew-kurian.github.io/CharacterMap/
+-- find more here: https://www.nerdfonts.com/cheat-sheet
+vim.g.use_nerd_icons = false
+if vim.fn.has "mac" == 1 or vim.g.use_nerd_icons then
+    -- elseif vim.fn.has "mac" == 1 then
+    return {
+        kind = {
+            Text = "",
+            -- Method = "m",
+            -- Function = "",
+            -- Constructor = "",
+            Method = "",
+            Function = "",
+            Constructor = "",
+            Field = "",
+            -- Variable = "",
+            Variable = "",
+            Class = "",
+            Interface = "",
+            -- Module = "",
+            Module = "",
+            Property = "",
+            Unit = "",
+            Value = "",
+            Enum = "",
+            -- Keyword = "",
+            Keyword = "",
+            -- Snippet = "",
+            Snippet = "",
+            Color = "",
+            File = "",
+            Reference = "",
+            Folder = "",
+            EnumMember = "",
+            Constant = "",
+            Struct = "",
+            Event = "",
+            Operator = "",
+            TypeParameter = "",
+        },
+        type = {
+            Array = "",
+            Number = "",
+            String = "",
+            Boolean = "蘒",
+            Object = "",
+        },
+        documents = {
+            File = "",
+            Files = "",
+            Folder = "",
+            OpenFolder = "",
+        },
+        git = {
+            Add = "",
+            Mod = "",
+            Remove = "",
+            Ignore = "",
+            Rename = "",
+            Diff = "",
+            Repo = "",
+            Octoface = "",
+        },
+        ui = {
+            ArrowClosed = "",
+            ArrowOpen = "",
+            Lock = "",
+            Circle = "",
+            BigCircle = "",
+            BigUnfilledCircle = "",
+            Close = "",
+            NewFile = "",
+            Search = "",
+            Lightbulb = "",
+            Project = "",
+            Dashboard = "",
+            History = "",
+            Comment = "",
+            Bug = "",
+            Code = "",
+            Telescope = "",
+            Gear = "",
+            Package = "",
+            List = "",
+            SignIn = "",
+            SignOut = "",
+            Check = "",
+            Fire = "",
+            Note = "",
+            BookMark = "",
+            Pencil = "",
+            -- ChevronRight = "",
+            ChevronRight = ">",
+            Table = "",
+            Calendar = "",
+            CloudDownload = "",
+        },
+        diagnostics = {
+            Error = "",
+            Warning = "",
+            Information = "",
+            Question = "",
+            Hint = "",
+        },
+        misc = {
+            Robot = "ﮧ",
+            Squirrel = "",
+            Tag = "",
+            Watch = "",
+            Smiley = "ﲃ",
+            Package = "",
+            CircuitBoard = "",
+        },
+    }
+else
+    --   פּ ﯟ   蘒練 some other good icons
+    return {
+        kind = {
+            Text = " ",
+            Method = " ",
+            Function = " ",
+            Constructor = " ",
+            Field = " ",
+            Variable = " ",
+            Class = " ",
+            Interface = " ",
+            Module = " ",
+            Property = " ",
+            Unit = " ",
+            Value = " ",
+            Enum = " ",
+            Keyword = " ",
+            Snippet = " ",
+            Color = " ",
+            File = " ",
+            Reference = " ",
+            Folder = " ",
+            EnumMember = " ",
+            Constant = " ",
+            Struct = " ",
+            Event = " ",
+            Operator = " ",
+            TypeParameter = " ",
+            Misc = " ",
+        },
+        type = {
+            Array = " ",
+            Number = " ",
+            String = " ",
+            Boolean = " ",
+            Object = " ",
+        },
+        documents = {
+            File = " ",
+            Files = " ",
+            Folder = " ",
+            OpenFolder = " ",
+        },
+        git = {
+            Add = " ",
+            Mod = " ",
+            Remove = " ",
+            Ignore = " ",
+            Rename = " ",
+            Diff = " ",
+            Repo = " ",
+            Octoface = " ",
+        },
+        ui = {
+            ArrowClosed = "",
+            ArrowOpen = "",
+            Lock = " ",
+            Circle = " ",
+            BigCircle = " ",
+            BigUnfilledCircle = " ",
+            Close = " ",
+            NewFile = " ",
+            Search = " ",
+            Lightbulb = " ",
+            Project = " ",
+            Dashboard = " ",
+            History = " ",
+            Comment = " ",
+            Bug = " ",
+            Code = " ",
+            Telescope = " ",
+            Gear = " ",
+            Package = " ",
+            List = " ",
+            SignIn = " ",
+            SignOut = " ",
+            NoteBook = " ",
+            Check = " ",
+            Fire = " ",
+            Note = " ",
+            BookMark = " ",
+            Pencil = " ",
+            ChevronRight = "",
+            Table = " ",
+            Calendar = " ",
+            CloudDownload = " ",
+        },
+        diagnostics = {
+            Error = " ",
+            Warning = " ",
+            Information = " ",
+            Question = " ",
+            Hint = " ",
+        },
+        misc = {
+            Robot = " ",
+            Squirrel = " ",
+            Tag = " ",
+            Watch = " ",
+            Smiley = " ",
+            Package = " ",
+            CircuitBoard = " ",
+        },
+    }
+end

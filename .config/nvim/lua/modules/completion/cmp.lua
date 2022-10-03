@@ -13,6 +13,9 @@ end
 
 local luasnip = require "luasnip"
 
+local icons = require "custom.icons"
+local kind_icons = icons.kind
+
 -- local border = {
 --     { "┏", "FloatBorder" },
 --     { "━", "FloatBorder" },
@@ -25,14 +28,14 @@ local luasnip = require "luasnip"
 -- }
 
 -- local border = {
--- 	{ "╔", "FloatBorder" },
--- 	{ "═", "FloatBorder" },
--- 	{ "╗", "FloatBorder" },
--- 	{ "║", "FloatBorder" },
--- 	{ "╝", "FloatBorder" },
--- 	{ "═", "FloatBorder" },
--- 	{ "╚", "FloatBorder" },
--- 	{ "║", "FloatBorder" },
+--     { "╔", "FloatBorder" },
+--     { "═", "FloatBorder" },
+--     { "╗", "FloatBorder" },
+--     { "║", "FloatBorder" },
+--     { "╝", "FloatBorder" },
+--     { "═", "FloatBorder" },
+--     { "╚", "FloatBorder" },
+--     { "║", "FloatBorder" },
 -- }
 
 -- local border = {
@@ -132,31 +135,37 @@ cmp.setup {
             cmp.config.compare.order,
         },
     },
+    -- formatting = {
+    --     -- fields = { "kind", "abbr", "menu" },
+    --     --[[ format = function(entry, vim_item)
+    --         local icons = require("custom.icons").lspkind
+    --         vim_item.kind = string.format("%s %s", icons[vim_item.kind], vim_item.kind)
+    --         vim_item.menu = ({
+    --             buffer = "[BUF]",
+    --             nvim_lsp = "[LSP]",
+    --             nvim_lua = "[API]",
+    --             path = "[PATH]",
+    --             luasnip = "[SNIP]",
+    --             npm = "[NPM]",
+    --             neorg = "[NEORG]",
+    --         })[entry.source.name]
+    --         return vim_item
+    --     end, ]]
+    --     -- fields = { "abbr", "kind", "menu" },
+    --     -- format = function(_, vim_item)
+    --     ---    local icons = require("custom.icons").lspkind
+    --     --     vim_item.kind = string.format("%s %s", icons[vim_item.kind], vim_item.kind)
+    --     --    return vim_item
+    --     -- end,
+    --     fields = { "kind", "menu", "abbr" },
+    --     format = function(_, vim_item)
+    --         vim_item.kind = string.format("%s", kind_icons[vim_item.kind], vim_item.kind, " %s")
+    --         return vim_item
+    --     end,
+    -- },
     formatting = {
-        -- fields = { "kind", "abbr", "menu" },
-        --[[ format = function(entry, vim_item)
-            local icons = require("custom.icons").lspkind
-            vim_item.kind = string.format("%s %s", icons[vim_item.kind], vim_item.kind)
-            vim_item.menu = ({
-                buffer = "[BUF]",
-                nvim_lsp = "[LSP]",
-                nvim_lua = "[API]",
-                path = "[PATH]",
-                luasnip = "[SNIP]",
-                npm = "[NPM]",
-                neorg = "[NEORG]",
-            })[entry.source.name]
-            return vim_item
-        end, ]]
-        -- fields = { "abbr", "kind", "menu" },
-        -- format = function(_, vim_item)
-        ---    local icons = require("custom.icons").lspkind
-        --     vim_item.kind = string.format("%s %s", icons[vim_item.kind], vim_item.kind)
-        --    return vim_item
-        -- end,
         format = function(_, vim_item)
-            local icons = require("custom.icons").lspkind
-            vim_item.kind = string.format("%s %s", icons[vim_item.kind], vim_item.kind)
+            vim_item.kind = (kind_icons[vim_item.kind] or "") .. vim_item.kind
             return vim_item
         end,
     },
