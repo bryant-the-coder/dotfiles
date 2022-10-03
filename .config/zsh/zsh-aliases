@@ -8,6 +8,8 @@ alias stable="bob use stable"
 alias nvimconf="zi nvim && nvim"
 alias i3conf="zi i3 && nvim"
 
+
+
 # Git
 alias ginit="git init"
 alias dotgit='git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
@@ -48,6 +50,15 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 alias ......="cd ../../../../.."
+
+function fzf_find() {
+find * | fzf --prompt 'All> ' \
+             --header 'CTRL-D: Directories / CTRL-F: Files' \
+             --bind 'ctrl-d:change-prompt(Directories> )+reload(find * -type d)' \
+             --bind 'ctrl-f:change-prompt(Files> )+reload(find * -type f)'
+}
+
+alias search="fzf_find"
 
 # Use exa to list dir
 # If exa is not found, use ls
