@@ -116,5 +116,3 @@ end ]]
 -- Commenting this out because it causes error on linux cuz i don't hv nu LMFAO
 --[[ vim.opt.shell = "nu"
 vim.opt.shellcmdflag = "-c" ]]
-
-vim.g.python3_host_prog = "C:/Users/User/AppData/Local/Programs/Python/Python310"
