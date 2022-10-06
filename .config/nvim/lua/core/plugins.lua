@@ -130,13 +130,8 @@ return require("packer").startup {
         -- Markdown Preview (seldom use)
         use {
             "iamcco/markdown-preview.nvim",
-            run = "cd app && yarn install",
-            ft = "markdown",
-            cmd = { "MarkdownPreview", "MarkdownPreviewStop", "MarkdownPreviewToggle" },
-            config = function()
-                -- Open the default browser
-                vim.g.mkdp_browser = "firefox"
-            end,
+            run = "cd app && npm install",
+            ft = { "markdown" },
         }
 
         -- Impatient
