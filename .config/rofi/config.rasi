@@ -1,26 +1,17 @@
-/*******************************************************
- * ROFI configs i3 Apps menu for EndeavourOS
- * Maintainer: joekamprad <joekamprad@endeavouros.com>
- *******************************************************/
-
 configuration {
-  font:"MonoLisa-Regular 13";
   modi: "drun";
   display-drun: "";
   show-icons: true;
   drun-display-format: "{icon}  {name}";
+  font:"MonoLisa-Regular 13";
 }
 
 @theme "/dev/null"
 
 * {
-  /* bg: #0A1114; */
-  /* fg: #dadada; */
-  /* al: #404749; */
-
-  bg: #1e1e2e;
-  fg: #cdd6f4;
-  al: #585b70;
+  bg: #0A1114;
+  fg: #dadada;
+  al: #404749;
   border-radius: 0.2em;
   background-color: @bg;
   text-color: @fg;
