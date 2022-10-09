@@ -69,6 +69,12 @@ return require("packer").startup {
             disable = plugins.catppuccin,
         }
 
+        use {
+            "Everblush/everblush.nvim",
+            as = "everblush",
+            disable = plugins.everblush,
+        }
+
         -----------------------------------
         --           Completion          --
         -----------------------------------

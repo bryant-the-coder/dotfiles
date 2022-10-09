@@ -12,6 +12,7 @@ config.plugins = {
     --              Theme            --
     -----------------------------------
     catppuccin = true,
+    everblush = true,
 
     -----------------------------------
     --           Completion          --
