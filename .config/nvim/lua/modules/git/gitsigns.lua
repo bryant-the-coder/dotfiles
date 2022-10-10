@@ -98,10 +98,3 @@ gitsigns.setup {
     word_diff = false,
     diff_opts = { internal = true },
 }
-
--- vim.cmd([[
---     highlight GitSignsAdd guifg=#9ece6a
---     highlight GitSignsChange guifg=#d39b47
---     highlight GitSignsDelete guifg=#d63131
---     highlight GitSignsCurrentLineBlame guifg=#FFFFFF
--- ]])
