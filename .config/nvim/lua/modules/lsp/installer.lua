@@ -28,7 +28,7 @@ mason.setup {
     -- servers that are requested to be installed will be put in a queue.
 
     -- NOTE: to prevent lack
-    max_concurrent_installers = 3,
+    max_concurrent_installers = 5,
 }
 
 local status_ok, mason_lspconfig = pcall(require, "mason-lspconfig")
