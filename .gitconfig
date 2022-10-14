@@ -6,6 +6,7 @@
 [user]
 	name = bryant-the-coder
 	email = foobryant99@gmail.com
+	signingkey = key::ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJoHMfGDSt8lKaxyxULk87kFOGXobhcT8wggjk/OaMB9 bryantfoo99@gmail.com
 [color]
 	ui = true
 [core]
@@ -19,4 +20,7 @@
 [init]
 	defaultBranch = main
 [credential]
-	helper = cache
+	helper = store
+[gpg]
+	program = gpg
+	format = ssh
