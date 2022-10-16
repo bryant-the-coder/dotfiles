@@ -1,34 +1,49 @@
+palette = "everblush"
+
+[palettes.everblush]
+background = "#141b1e"
+lighter_background = "#232a2d"
+red = "#e57474"
+green = "#8ccf7e"
+yellow = "#e5c76b"
+blue = "#67b0e8"
+magenta = "#c47fd5"
+cyan = "#6cbfbf"
+light_gray = "#b3b9b8"
+foreground = "#dadada"
+
+
 # Prompt: param 2 └─
 [character]
-success_symbol = " [╰─λ](bold #b4f9f8)"
-error_symbol = " [](bold #e57474)"
+success_symbol = " [╰─λ](bold fg:blue)"
+error_symbol = " [](bold fg:red)"
 
 # Third param
 [directory]
 format = "[$path]($style)[$lock_symbol]($lock_style) "
-style = "fg:#67b0e8"
+style = "fg:blue"
 truncation_length = 3
 truncate_to_repo = false
 truncation_symbol = "../"
 
 [git_branch]
-format = "[ ](fg:#FFFFFF)[$symbol$branch ]($style)"
+format = "[ ](fg:foreground)[$symbol$branch ]($style)"
 symbol = " "
-style = "bold #c47fd5"
+style = "bold magenta"
 
 [git_status]
 format ='([\[$all_status$ahead_behind\] ]($style))'
 conflicted = "="
-ahead =	"[  $count ](fg:#8ccf7e)"
-behind = "[  $count ](fg:#e57474)"
+ahead =	"[  $count ](fg:green)"
+behind = "[  $count ](fg:red)"
 diverged = "⇕ ${ahead_count} ${behind_count}"
-untracked = "[ ?$count ](fg:#6cbfbf)"
-modified = "[ $count ](fg:#8ccf7e)"
-staged = "[ $count ](fg:#6cbfbf)"
-renamed = "[ »$count ](fg:#c47fd5)"
-deleted = "[ ✘$count ](fg:#e57474)"
+untracked = "[ ?$count ](fg:cyan)"
+modified = "[ $count ](fg:green)"
+staged = "[ $count ](fg:cyan)"
+renamed = "[ »$count ](fg:magenta)"
+deleted = "[ ✘$count ](fg:red)"
 disabled = false
-style = "fg:#dadada"
+style = "fg:foreground"
 
 [cmd_duration]
 disabled = true
