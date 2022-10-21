@@ -1,58 +1,100 @@
-configuration {
-  modi: "drun";
-  display-drun: "";
-  show-icons: true;
-  drun-display-format: "{icon}  {name}";
-  font:"MonoLisa-Regular 13";
+configuration{
+    modi: "run,drun,window";
+    lines: 5;
+    font:"MonoLisa-Regular 13";
+    show-icons: true;
+    drun-display-format: "{icon} {name}";
+    location: 0;
+    disable-history: false;
+    hide-scrollbar: true;
+    display-drun: "  Apps ";
+    display-run: "  Run ";
+    display-window: " 﩯 window";
+    /* display-Network: " 󰤨  Network"; */
+    sidebar-mode: true;
 }
 
-@theme "/dev/null"
+@theme "color/everblush.rasi"
 
-* {
-  bg: #0A1114;
-  fg: #dadada;
-  al: #404749;
-  border-radius: 0.2em;
-  background-color: @bg;
-  text-color: @fg;
+element-text, element-icon , mode-switcher {
+    background-color: inherit;
+    text-color:       inherit;
 }
 
 window {
-  location: center;
-  width: 25%;
-  spacing: 0;
-  children: [ box ];
+    height: 360px;
+    border: 3px;
+    border-color: @border-col;
+    background-color: @bg-col;
 }
 
-box {
-  padding: 0.75em;
-  spacing: 0.5em;
-  children: [ entry, listview ];
+mainbox {
+    background-color: @bg-col;
+}
+
+inputbar {
+    children: [prompt,entry];
+    background-color: @bg-col;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+prompt {
+    background-color: @blue;
+    padding: 6px;
+    text-color: @bg-col;
+    border-radius: 3px;
+    margin: 20px 0px 0px 20px;
+}
+
+textbox-prompt-colon {
+    expand: false;
+    str: ":";
 }
 
 entry {
-  placeholder: "Search...";
-  placeholder-color: @al;
-  padding: 0.75em;
-  expand: false;
-}
-
-element {
-  text-color: @al;
-  padding: 0.75em;
-}
-element selected {
-  text-color: @fg;
-}
-element-text, element-icon {
-  background-color: inherit;
-  text-color: inherit;
+    padding: 6px;
+    margin: 20px 0px 0px 10px;
+    text-color: @fg-col;
+    background-color: @bg-col;
 }
 
 listview {
-  lines: 10;
+    border: 0px 0px 0px;
+    padding: 6px 0px 0px;
+    margin: 10px 0px 0px 20px;
+    columns: 2;
+    background-color: @bg-col;
 }
 
-listview, element, element selected, element-text, element-icon {
-  cursor: pointer;
+element {
+    padding: 5px;
+    background-color: @bg-col;
+    text-color: @fg-col  ;
+}
+
+element-icon {
+    size: 25px;
+}
+
+element selected {
+    background-color:  @selected-col ;
+    text-color: @fg-col2  ;
+}
+
+mode-switcher {
+    spacing: 0;
+  }
+
+button {
+    padding: 10px;
+    background-color: @bg-col-light;
+    text-color: @grey;
+    vertical-align: 0.5;
+    horizontal-align: 0.5;
+}
+
+button selected {
+  background-color: @bg-col;
+  text-color: @blue;
 }
