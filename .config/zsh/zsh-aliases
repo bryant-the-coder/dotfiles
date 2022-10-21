@@ -8,8 +8,6 @@ alias stable="bob use stable"
 alias nvimconf="zi nvim && nvim"
 alias i3conf="zi i3 && nvim"
 
-
-
 # Git
 alias ginit="git init"
 alias dotgit='git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'

@@ -107,10 +107,14 @@ else
   export EDITOR='nvim'
 fi
 
+# colorscript random
+clear && neofetch
+
 # export FZF_DEFAULT_COMMAND='fzf'
 # export FZF_DEFAULT_OPTS="--layout=reverse --inline-info --height=80%"
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
+
 
 # Alias
 # alias vim="nvim"
