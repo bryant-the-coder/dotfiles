@@ -98,3 +98,5 @@ button selected {
   background-color: @bg-col;
   text-color: @blue;
 }
+
+/* vim:ft=css

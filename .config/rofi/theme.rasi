@@ -32,3 +32,5 @@
     active-background:           rgba ( 29, 31, 33, 17 % );
     selected-active-background:  rgba ( 26, 28, 35, 100 % );
 }
+
+/* vim:ft=css

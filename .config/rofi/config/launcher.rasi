@@ -147,3 +147,5 @@ element selected.active {
     background-color:               @BGA;
     color:                          @FG;
 }
+
+/* vim:ft=css

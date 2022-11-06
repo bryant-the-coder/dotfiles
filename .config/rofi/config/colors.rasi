@@ -1,12 +1,14 @@
 * {
-    BG:    #141b1eff;
-    BGA:   #4b5263ff;
-    FG:    #dadadaff;
-    FGA:   #5c6370ff;
-    BDR:   #c47fd5ff;
-    SEL:   #232a2dff;
-    UGT:   #e57474ff;
+    BG:    #1E1D2Fff;
+    BGA:   #89DCEBff;
+    FG:    #D9E0EEff;
+    FGA:   #F28FADff;
+    BDR:   #96CDFBff;
+    SEL:   #1E1E2Eff;
+    UGT:   #F28FADff;
     IMG:   #FAE3B0ff;
     OFF:   #575268ff;
     ON:    #ABE9B3ff;
 }
+
+/* vim:ft=css

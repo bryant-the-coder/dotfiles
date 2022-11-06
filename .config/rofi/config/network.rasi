@@ -148,3 +148,5 @@ element.selected.active {
 element.selected.active {
   border-color: @BDR;
 }
+
+/* vim:ft=css

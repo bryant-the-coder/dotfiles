@@ -5,11 +5,11 @@ uptime=$(uptime -p | sed -e 's/up //g')
 
 # Options
 if [[ "$DIR" == "powermenus" ]]; then
-shutdown=" "
-reboot=" "
-lock=" "
-suspend=" "
-logout=" "
+shutdown=""
+reboot=""
+lock=""
+suspend=""
+logout=""
 ddir="$HOME/.config/rofi/config"
 else
 
@@ -20,31 +20,31 @@ layout=`cat $HOME/.config/rofi/config/powermenu.rasi | grep BUTTON | cut -d'=' -
 if [[ "$layout" == "TRUE" ]]; then
   # Section 1
 
-shutdown=""
-reboot=""
-lock=""
-suspend=""
-logout=""
+shutdown=""
+reboot=""
+lock=""
+suspend=""
+logout=""
   # Section 2
-shutdown="襤"
-reboot="ﰇ"
-lock=""
-suspend="鈴"
-logout=" "
+shutdown=""
+reboot=""
+lock=""
+suspend=""
+logout=""
 
 
 else
   # Section 1
-shutdown=" Shutdown"
-reboot=" Restart"
-lock=" Lock"
-suspend=" Sleep"
-logout=" Logout"
+shutdown=" Shutdown"
+reboot=" Reboot"
+lock=" Lock"
+suspend=" Suspend"
+logout=" Logout"
   # Section 2
-shutdown="襤Shutdown"
-reboot="ﰇ Restart"
-lock=" Lock"
-suspend="鈴Sleep"
+shutdown=" Shutdown"
+reboot=" Reboot"
+lock=" Lock"
+suspend=" Suspend"
 logout=" Logout"
 fi
 ddir="$HOME/.config/rofi/config"
@@ -106,11 +106,11 @@ show_msg
         fi
         ;;
     $logout)
-$(rdialog &)
-[ $ans == "yes" ]] || [[ $ans == "YES" ]] || [[ $ans == "y" ]]; then
-pc quit
- [[ $ans == "no" ]] || [[ $ans == "NO" ]] || [[ $ans == "n" ]]; then
-it
+ans=$(rdialog &)
+if [[ $ans == "yes" ]] || [[ $ans == "YES" ]] || [[ $ans == "y" ]]; then
+bspc quit
+elif [[ $ans == "no" ]] || [[ $ans == "NO" ]] || [[ $ans == "n" ]]; then
+exit
         else
 show_msg
         fi
