@@ -17,6 +17,8 @@ fi
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 # ZSH_CUSTOM=~/.config/zsh
+ZSH_TMUX_AUTOSTART="true"
+ZSH_TMUX_CONFIG=".config/tmux/tmux.conf"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -93,6 +95,7 @@ plugins=(
     history-substring-search
     pip
     poetry
+    tmux
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -122,7 +125,6 @@ clear && neofetch
 # export FZF_DEFAULT_OPTS="--layout=reverse --inline-info --height=80%"
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
-
 
 # Alias
 # alias vim="nvim"
