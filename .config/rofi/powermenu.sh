@@ -1,4 +1,4 @@
-#!/bin/env bash
+#!/bin/env bashpower
 
 # Options for powermenu
 lock="    Lock"

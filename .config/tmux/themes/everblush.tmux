@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-# doom-one colors for Tmux
 
 set -g mode-style "fg=#141b1e,bg=#67b0e8"
 
