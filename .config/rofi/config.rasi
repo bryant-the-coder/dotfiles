@@ -14,7 +14,7 @@ configuration{
     sidebar-mode: true;
 }
 
-@theme "color/mocha.rasi"
+@theme "color/everblush.rasi"
 
 element-text, element-icon , mode-switcher {
     background-color: inherit;

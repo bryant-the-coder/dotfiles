@@ -23,6 +23,10 @@ set -g status-right-style NONE
 set -g status-left "#[fg=#141b1e,bg=#67b0e8,nobold] #S #[fg=#67b0e8,bg=#141b1e,nobold,nounderscore,noitalics]"
 set -g status-right "#[fg=#141b1e,bg=#141b1e,nobold,nounderscore,noitalics]#[fg=#c47fd5,bg=#141b1e] #{prefix_highlight} #[fg=#c47fd5,bg=#141b1e,nobold,nounderscore,noitalics]#[fg=#141b1e,bg=#c47fd5] %Y-%m-%d  %I:%M %p #[fg=#141b1e,bg=#c47fd5,nobold,nounderscore,noitalics]#[fg=#67b0e8,bg=#141b1e,bold] #(who | cut -d \" \" -f1)@#h "
 
+set -g @prefix_highlight_output_prefix "#[fg=brightcyan]#[bg=black]#[nobold]#[noitalics]#[nounderscore]#[bg=brightcyan]#[fg=black]"
+set -g @prefix_highlight_output_suffix ""
+set -g @prefix_highlight_copy_mode_attr "fg=brightcyan,bg=black,bold"
+
 setw -g window-status-activity-style "underscore,fg=#c47fd5,bg=#141b1e"
 setw -g window-status-separator ""
 setw -g window-status-style "NONE,fg=#e5c76b,bg=#141b1e"

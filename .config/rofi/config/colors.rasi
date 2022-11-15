@@ -1,4 +1,4 @@
-* {
+/* * {
     BG:    #1E1D2Fff;
     BGA:   #89DCEBff;
     FG:    #D9E0EEff;
@@ -9,6 +9,36 @@
     IMG:   #FAE3B0ff;
     OFF:   #575268ff;
     ON:    #ABE9B3ff;
+} */
+
+
+/* Everforest */
+/* * {
+    BG:    #2b3339ff;
+    BGA:   #89DCEBff;
+    FG:    #d3c6aaff;
+    FGA:   #9da9a0ff;
+    BDR:   #83c092ff;
+    SEL:   #1E1E2Eff;
+    UGT:   #7fbbb3ff;
+    IMG:   #FAE3B0ff;
+    OFF:   #575268ff;
+    ON:    #ABE9B3ff;
+} */
+
+
+* {
+    BG:    #141b1eff;
+    BGA:   #232a2dff;
+    FG:    #dadadaff;
+    FGA:   #b3b9b8ff;
+    BDR:   #6cbfbfff;
+    SEL:   #67b0e8ff;
+    UGT:   #F28FADff;
+    IMG:   #FAE3B0ff;
+    OFF:   #575268ff;
+    ON:    #ABE9B3ff;
 }
+
 
 /* vim:ft=css
