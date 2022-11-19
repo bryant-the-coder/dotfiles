@@ -1,4 +1,4 @@
-/* * {
+* {
     BG:    #1E1D2Fff;
     BGA:   #89DCEBff;
     FG:    #D9E0EEff;
@@ -9,7 +9,7 @@
     IMG:   #FAE3B0ff;
     OFF:   #575268ff;
     ON:    #ABE9B3ff;
-} */
+}
 
 
 /* Everforest */
@@ -27,7 +27,7 @@
 } */
 
 
-* {
+/* * {
     BG:    #141b1eff;
     BGA:   #232a2dff;
     FG:    #dadadaff;
@@ -38,7 +38,7 @@
     IMG:   #FAE3B0ff;
     OFF:   #575268ff;
     ON:    #ABE9B3ff;
-}
+} */
 
 
 /* vim:ft=css

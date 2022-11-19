@@ -8,6 +8,7 @@
     fg-col2: #a6adc8;
     grey: #a6adc8;
     width: 600;
+    rad: 12px;
 }
 
 /* vim:ft=css
