@@ -35,3 +35,52 @@ function acp() {
   git commit -m "$1"
   git push
 }
+
+ee() { # wrapper around gpg to edit encrypted files with $EDITOR
+    # get file info and a temporary file name
+    [ ! "$1" ] && return 1
+
+    file="$1"
+    tmp="$(mktemp -u).$(basename "$file")"
+
+    [ -e "$file" ] # file exists?
+    file_exists=$?
+
+    file -b "$file" | grep -Eq '^GPG symmetrically encrypted data \(AES256 cipher\)$' # file is encrypted?
+    file_is_enc=$?
+
+    # if it is encrypted, decrypt it
+    if [ $file_is_enc -eq 0 ]; then
+        #                                                                            exit 1 on error
+        gpg --output "$tmp" -d --cipher-algo AES256 --pinentry-mode loopback "$file" || return 1
+    fi
+
+    # if it did NOT get decrypted AND it exists, just edit it normally and exit
+    if [ $file_is_enc -ne 0 ] && [ $file_exists -eq 0 ]; then
+    #                   exit after
+        $EDITOR "$file" && return 0
+    fi
+
+    [ $file_is_enc -eq 0 ] && cp "$tmp" "$tmp.orig" # if it did get decrypted, copy tmp to another tmpfile for comparison
+
+    $EDITOR "$tmp" # open editor
+
+    [ $file_is_enc -eq 0 ] || [ ! -e "$file" ] # original file got decrypted OR original file does not exist?
+    should_enc=$?
+
+    [ -e "$tmp" ] # tmpfile exists?
+    tmp_exists=$?
+
+    ! diff -Nq "$tmp" "$tmp.orig" > /dev/null 2>&1 # tmpfile differs from the tmpfile copy?
+    tmp_modified=$?
+
+    file -b "$tmp" | grep -Eqv '^empty$|^very short file \(no magic\)$' # tmpfile NOT empty or short?
+    tmp_empty=$?
+
+    # if all those conditions are met, encrypt
+    [ $should_enc -eq 0 ] && [ $tmp_exists -eq 0 ] && [ $tmp_modified -eq 0 ] && [ $tmp_empty -eq 0 ] &&\
+        gpg --output "$file" -c --cipher-algo AES256 --pinentry-mode loopback --no-symkey-cache "$tmp"
+
+    # remove tmpfiles
+    rm -f "$tmp" "$tmp.orig"
+}
