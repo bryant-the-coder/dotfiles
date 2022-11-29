@@ -1,6 +1,7 @@
 # Dev workflow
 alias CLEAR="clear"
 alias lazy="lazygit"
+alias nv="nvim"
 alias vim="nvim"
 alias vi="nvim"
 alias v="nvim"
