@@ -14,7 +14,6 @@ fi
 # export PATH=$HOME/.scripts/:$PATH
 # export PATH=$HOME/.local/share/neovim/bin:$PATH
 
-# my github token: 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
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -122,7 +121,7 @@ else
   export EDITOR='nvim'
 fi
 
-colorscript random
+# colorscript random
 # clear && neofetch
 
 # export FZF_DEFAULT_COMMAND='fzf'
