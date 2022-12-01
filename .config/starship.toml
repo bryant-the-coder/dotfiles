@@ -1,4 +1,4 @@
-palette = "everblush"
+palette = "mocha"
 
 [palettes.everblush]
 background = "#141b1e"
@@ -12,6 +12,18 @@ cyan = "#6cbfbf"
 light_gray = "#b3b9b8"
 foreground = "#dadada"
 
+
+[palettes.mocha]
+background = "#1e1e2e"
+lighter_background = "#313244"
+red = "#f38ba8"
+green = "#a6e3a1"
+yellow = "#f9e2af"
+blue = "#89b4fa"
+magenta = "#cba6f7"
+cyan = "#94e2d5"
+light_gray = "#a6adc8"
+foreground = "#cdd6f4"
 
 # Prompt: param 2 └─
 [character]
@@ -109,7 +121,6 @@ style = "italic bold yellow"
 disabled=false
 format = "on [$symbol$version]($style) "
 # style = "bold green"
-symbol = " "
 
 [cmake]
 disabled = false

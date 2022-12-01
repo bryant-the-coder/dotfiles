@@ -111,7 +111,7 @@ for_window [class="^discord"] move container to workspace $ws4
 # Wallpaper
 # exec_always feh --bg-fill ~/.config/wallpaper/arts/1656714041_24-animeshka-org-p-coffee-shop-era-art-arti-25.jpg
 # exec_always feh --bg-fill ~/.config/wallpaper/anime/depressed_man_blood_dark.jpg
-exec_always feh --bg-fill ~/.config/wallpaper/arts/wallhaven-2e8v5x.png
+exec_always feh --bg-fill ~/.config/wallpaper/arts/leaving_this_place.png
 # exec_always feh --bg-fill ~/.config/wallpaper/nature/wallhaven-28v3mm_1920x1080.png
 
 # Randomize wallpaper everytime on startup
@@ -122,7 +122,8 @@ exec_always feh --bg-fill ~/.config/wallpaper/arts/wallhaven-2e8v5x.png
 # exec_always sudo systemctl start docker
 
 # Window compositor
-exec_always picom --experimental-backends -b --vsync
+exec_always picom -b --vsync
+# exec_always --no-startup-id ~/dev/GITHUB/Clones/xborder/xborders --border-radius 8 --border-red 137 --border-green 180 --border-blue 250 --border-width 2
 
 # Polybar
 exec_always --no-startup-id ~/.config/polybar/launch.sh
