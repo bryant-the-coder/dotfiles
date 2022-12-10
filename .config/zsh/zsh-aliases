@@ -12,6 +12,14 @@ alias i3conf="zi i3 && nvim"
 alias rust_nightly="rustup update"
 alias nightky="bob use nightly"
 
+# Cd into a dir
+alias usb="cd /run/media/bryant/7_7GB/"
+
+# TMUX
+alias fun="ts fun"
+alias dev="ts dev"
+alias hw="ts hw"
+
 # Git
 alias ginit="git init"
 alias dotgit='git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'

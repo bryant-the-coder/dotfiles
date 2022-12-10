@@ -111,12 +111,12 @@ for_window [class="^discord"] move container to workspace $ws4
 # Wallpaper
 # exec_always feh --bg-fill ~/.config/wallpaper/arts/1656714041_24-animeshka-org-p-coffee-shop-era-art-arti-25.jpg
 # exec_always feh --bg-fill ~/.config/wallpaper/anime/depressed_man_blood_dark.jpg
-exec_always feh --bg-fill ~/.config/wallpaper/arts/leaving_this_place.png
-# exec_always feh --bg-fill ~/.config/wallpaper/nature/wallhaven-28v3mm_1920x1080.png
+exec_always feh --bg-fill ~/.config/wallpaper/arts/are_you_still_pain.jpg
+# exec_always feh --bg-fill ~/.config/wallpaper/nature/dark_sky_and_trees_darker.png
 
 # Randomize wallpaper everytime on startup
 # exec_always feh --bg-fill --randomize ~/.config/wallpaper/dtos/
-# exec_always --no-startup-id killall cava; exec ~/dev/GITHUB/Clones/i3bgwin/i3bgwin urxvt -depth 32 -bg '[00]black' --color6 '[50]cyan' +sb -embed {windowid} -e cava
+exec_always --no-startup-id killall cava; exec ~/dev/GITHUB/Clones/i3bgwin/i3bgwin urxvt -depth 32 -bg '[00]black' --color6 '[50]cyan' +sb -embed {windowid} -e cava
 
 # Starting docker
 # exec_always sudo systemctl start docker
