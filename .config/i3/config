@@ -50,6 +50,10 @@ client.placeholder      #2d3437 #141b1e #dadada #141b1e   #2d3437
 client.background       #141b1e
 
 
+title_align center
+focus_follows_mouse no
+
+
 ##############
 # Workspaces #
 ##############
@@ -111,7 +115,7 @@ for_window [class="^discord"] move container to workspace $ws4
 # Wallpaper
 # exec_always feh --bg-fill ~/.config/wallpaper/arts/1656714041_24-animeshka-org-p-coffee-shop-era-art-arti-25.jpg
 # exec_always feh --bg-fill ~/.config/wallpaper/anime/depressed_man_blood_dark.jpg
-exec_always feh --bg-fill ~/.config/wallpaper/arts/are_you_still_pain.jpg
+exec_always feh --bg-fill ~/.config/wallpaper/arts/lofi.jpg
 # exec_always feh --bg-fill ~/.config/wallpaper/nature/dark_sky_and_trees_darker.png
 
 # Randomize wallpaper everytime on startup
@@ -224,6 +228,9 @@ bindsym $mod+Shift+f exec firefox
 
 # Discord
 bindsym $mod+Shift+d exec Discord
+
+# File manager
+bindsym $mod+Ctrl+a exec nautilus
 
 # kill focused window
 bindsym $mod+Shift+q kill

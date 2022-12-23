@@ -13,7 +13,7 @@ alias rust_nightly="rustup update"
 alias nightky="bob use nightly"
 
 # Cd into a dir
-alias usb="cd /run/media/bryant/7_7GB/"
+alias usb="cd /run/media/bryant/CSF/"
 
 # TMUX
 alias fun="ts fun"

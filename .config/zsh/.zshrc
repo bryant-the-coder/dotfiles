@@ -102,6 +102,7 @@ plugins=(
     rust
     tmux
     zsh-autosuggestions
+    fzf-tab
 )
 
 source $ZSH/oh-my-zsh.sh

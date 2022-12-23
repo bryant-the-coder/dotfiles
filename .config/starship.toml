@@ -124,7 +124,7 @@ format = "on [$symbol$version]($style) "
 
 [cmake]
 disabled = false
-format = "via [$symbol($version )]($style)"
+format = "via [$symbol($numver )]($style)"
 style = "bold red"
 
 # add_newline = false
