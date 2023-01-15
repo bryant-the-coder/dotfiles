@@ -78,25 +78,25 @@ colors:
     - { index: 17, color: "#F5E0DC" }
 
 font:
-  normal:
-    family: JetBrainsMono Nerd Font Mono
-    style: Regular
-  bold:
-    family: JetBrainsMono Nerd Font Mono
-    style: Bold
-  italic:
-    family: JetBrainsMono Nerd Font Mono
-    style: Italic
-
   # normal:
-  #   family: Operator Mono SSm Lig Book
-  #   style: Book
+  #   family: JetBrainsMono Nerd Font Mono
+  #   style: Regular
   # bold:
-  #   family: Operator Mono SSm Lig Book
+  #   family: JetBrainsMono Nerd Font Mono
   #   style: Bold
   # italic:
-  #   family: Operator Mono SSm Lig Book
-  #   style: Book Italic
+  #   family: JetBrainsMono Nerd Font Mono
+  #   style: Italic
+
+  normal:
+    family: Operator Mono SSm Lig Book
+    style: Book
+  bold:
+    family: Operator Mono SSm Lig Book
+    style: Bold
+  italic:
+    family: Operator Mono SSm Lig Book
+    style: Book Italic
 
   size: 10.0
 

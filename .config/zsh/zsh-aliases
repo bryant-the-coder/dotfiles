@@ -7,10 +7,11 @@ alias vi="nvim"
 alias v="nvim"
 alias nightly="bob use nightly"
 alias stable="bob use stable"
-alias nvimconf="z nvim && nvim"
+alias nvimc="cd ~/.config/nvim/ && nvim"
 alias i3conf="zi i3 && nvim"
 alias rust_nightly="rustup update"
 alias nightky="bob use nightly"
+alias wezterm='flatpak run org.wezfurlong.wezterm'
 
 # Cd into a dir
 alias usb="cd /run/media/bryant/CSF/"

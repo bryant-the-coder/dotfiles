@@ -10,6 +10,7 @@ configuration{
     display-drun: "  Apps ";
     display-run: "  Run ";
     display-window: " 﩯 window";
+    display-splatmoji: "test";
     /* display-Network: " 󰤨  Network"; */
     sidebar-mode: true;
 }
