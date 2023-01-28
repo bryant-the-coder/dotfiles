@@ -251,3 +251,4 @@ bindsym $mod+p exec --no-startup-id sh $HOME/.config/rofi/bin/powermenu
 bindsym $mod+o exec --no-startup-id rofi -show power-menu -modi power-menu:~/.config/polybar/scripts/rofi-power-menu
 
 bindsym $mod+slash exec "~/dev/PERSONAL/Fedora_stuff/splatmoji/splatmoji --disable-emoji-db copypaste"
+
