@@ -1,3 +1,5 @@
+command_timeout = 1000
+
 palette = "mocha"
 
 [palettes.everblush]
@@ -11,7 +13,6 @@ magenta = "#c47fd5"
 cyan = "#6cbfbf"
 light_gray = "#b3b9b8"
 foreground = "#dadada"
-
 
 [palettes.mocha]
 background = "#1e1e2e"

@@ -28,6 +28,7 @@ _comps=(
 'add-zle-hook-widget' '_add-zle-hook-widget'
 'add-zsh-hook' '_add-zsh-hook'
 'admin' '_sccs'
+'ag' '_ag'
 'ali' '_mh'
 'alias' '_alias'
 'amaya' '_webbrowser'
@@ -520,7 +521,6 @@ _comps=(
 'ggetopt' '_getopt'
 'ggrep' '_grep'
 'ggv' '_gnome-gv'
-'gh' '_gh'
 'ghead' '_head'
 'ghostscript' '_ghostscript'
 'ghostview' '_pspdf'
@@ -1912,10 +1912,10 @@ bindkey '^[/' _history-complete-older
 bindkey '^[~' _bash_complete-word
 
 autoload -Uz _rustc _pip _cargo _rustup _timer \
-            _zscroll _bat _bluetoothctl _bootctl _btm \
-            _busctl _bwrap _catimg _code _colorscript \
-            _coredumpctl _curl _exa _fd _fedpkg \
-            _firewalld _flameshot _flatpak _gh _hg \
+            _zscroll _ag _bat _bluetoothctl _bootctl \
+            _btm _busctl _bwrap _catimg _code \
+            _colorscript _coredumpctl _curl _exa _fd \
+            _fedpkg _firewalld _flameshot _flatpak _hg \
             _hostnamectl _hyperfine _journalctl _kernel-install _libinput \
             _localectl _loginctl _machinectl _mercurial _meson \
             _mpv _networkctl _ninja _oomctl _playerctl \
@@ -2122,5 +2122,5 @@ autoload -Uz +X _call_program
 typeset -gUa _comp_assocs
 _comp_assocs=( '' )
 
-#omz revision: b0bffcaf865434711d98b63eddd0aa52be0fbeb1
+#omz revision: 041c35ffc8cd97dd6327f44e35fa777af6f8e845
 #omz fpath: /home/bryant/.oh-my-zsh/custom/plugins/fzf-tab /home/bryant/.oh-my-zsh/custom/plugins/zsh-autosuggestions /home/bryant/.oh-my-zsh/plugins/tmux /home/bryant/.oh-my-zsh/plugins/rust /home/bryant/.oh-my-zsh/plugins/poetry /home/bryant/.oh-my-zsh/plugins/pip /home/bryant/.oh-my-zsh/plugins/git /home/bryant/.oh-my-zsh/plugins/history-substring-search /home/bryant/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting /home/bryant/.oh-my-zsh/plugins/fzf /home/bryant/.oh-my-zsh/functions /home/bryant/.oh-my-zsh/completions /home/bryant/.oh-my-zsh/cache/completions /usr/local/share/zsh/site-functions /usr/share/zsh/site-functions /usr/share/zsh/5.9/functions

@@ -19,7 +19,6 @@ fi
 export ZSH="$HOME/.oh-my-zsh"
 # ZSH_CUSTOM=~/.config/zsh
 ZSH_TMUX_AUTOSTART="false"
-ZSH_TMUX_AUTOQUIT="true"
 ZSH_TMUX_CONFIG=".config/tmux/tmux.conf"
 
 # source ~/.zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
