@@ -3,7 +3,8 @@
 export PATH=$HOME/.local/bin:$PATH
 export PATH=$HOME/bin:$PATH
 export PATH=$HOME/.scripts/:$PATH
-export PATH=$HOME/.local/share/neovim/bin:$PATH
+# export PATH=$HOME/.local/share/neovim/bin:$PATH
+export PATH=$HOME:/home/bryant/.local/share/bob/nvim-bin:$PATH
 export PATH=$HOME:/home/bryant/.spicetify:$PATH
 export PATH=$HOME:~/.local/share/nvim/mason/bin:$PATH
 export GPG_TTY=$(tty)
