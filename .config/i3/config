@@ -113,8 +113,8 @@ for_window [class="^discord"] move container to workspace $ws4
 
 # Wallpaper
 # exec_always feh --bg-fill ~/.config/wallpaper/arts/1656714041_24-animeshka-org-p-coffee-shop-era-art-arti-25.jpg
-# exec_always feh --bg-fill ~/.config/wallpaper/anime/depressed_man_blood_dark.jpg
-exec_always feh --bg-fill ~/.config/wallpaper/arts/lofi_cafe.jpg
+exec_always feh --bg-fill ~/.config/wallpaper/anime/my_hero_academia_darken.png
+# exec_always feh --bg-fill ~/.config/wallpaper/arts/lofi_cafe.jpg
 # exec_always feh --bg-fill ~/.config/wallpaper/arts/this_is_who_i_am.jpg
 # exec_always feh --bg-fill ~/.config/wallpaper/nature/dark_sky_and_trees_darker.png
 

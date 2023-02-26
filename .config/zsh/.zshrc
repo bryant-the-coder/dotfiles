@@ -108,6 +108,7 @@ source $ZSH/oh-my-zsh.sh
 
 # export ZDOTDIR=$HOME/.config/zsh
 source "$ZDOTDIR/zsh-functions"
+# source ~/.zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
 
 zsh_add_file "zsh-aliases"
 zsh_add_file "zsh-exports"
