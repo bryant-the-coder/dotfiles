@@ -1,0 +1,29 @@
+/* * {
+    bg-col: #1e1e2e;
+    bg-col-light: #45475a;
+    border-col: #1e1e2e;
+    selected-col: #181825;
+    blue: #89b4fa;
+    fg-col: #cdd6f4;
+    fg-col2: #a6adc8;
+    grey: #a6adc8;
+    width: 600;
+    rad: 12px;
+} */
+
+
+* {
+    background:     #1e1e2e;
+    background-alt: #45475a;
+    foreground:     #cdd6f4;
+    selected:       #181825;
+    border-col:     #1e1e2e;
+    active:         #a6e3a1;
+    urgent:         #f38ba8;
+    blue:           #89b4fa;
+    grey:           #a6adc8;
+    width: 600;
+    rad: 12px;
+}
+
+/* vim:ft=css

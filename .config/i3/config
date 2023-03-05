@@ -246,10 +246,11 @@ bindsym $mod+Shift+q kill
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 bindsym Print exec flameshot gui
-bindsym $mod+d exec --no-startup-id rofi -show drun -show-icons
-bindsym $mod+p exec --no-startup-id sh $HOME/.config/rofi/bin/powermenu
+bindsym $mod+d exec --no-startup-id ~/.config/rofi/launchers/type-1/launcher.sh
+bindsym $mod+p exec --no-startup-id ~/.config/rofi/powermenu/type-4/powermenu.sh
 bindsym $mod+o exec --no-startup-id rofi -show power-menu -modi power-menu:~/.config/polybar/scripts/rofi-power-menu
 
 bindsym $mod+slash exec "~/dev/PERSONAL/Fedora_stuff/splatmoji/splatmoji --disable-emoji-db copypaste"
 bindsym $mod+z exec zeal
-
+bindsym $mod+ctrl+space exec "$HOME/.config/rofi/bin/book-search.sh"
+bindsym $mod+ctrl+b exec "$HOME/.config/rofi/bin/web-search.sh"
