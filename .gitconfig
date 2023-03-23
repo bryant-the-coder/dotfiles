@@ -18,9 +18,27 @@
 	pr = "!f() { git fetch -fu ${2:-$(git remote |grep ^upstream || echo origin)} refs/pull/$1/head:pr/$1 && git checkout pr/$1; }; f"
 	pr-clean = "!git for-each-ref refs/heads/pr/* --format=\"%(refname)\" | while read ref ; do branch=${ref#refs/heads/} ; git branch -D $branch ; done"
 [init]
-	defaultBranch = main
+    defaultBranch = main
+
+##### Github specific
+[github]
+	user = bryant-the-coder
+# read from given uri
+# push to writable one
+[url "https://github.com/"]
+	insteadOf = "gh:"
+
+[url "git@github.com:"]
+	pushInsteadOf = "https://github.com/"
+	pushInsteadOf = "http://github.com/"
+	pushInsteadOf = "gh:"
+
 [credential]
-	helper = store
+    helper = store
+[help]
+	# Automatically correct and execute mistyped commands.
+	autocorrect = 1
 [gpg]
 	program = gpg
-	format = ssh
+    format = ssh
+

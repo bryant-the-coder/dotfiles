@@ -1,0 +1,15 @@
+* {
+    background:     #1b2124;
+    background-alt: #5a5a58;
+    foreground:     #dad0bc;
+    selected:       #22292d;
+    border-col:     #1b2124;
+    active:         #83c092;
+    urgent:         #e67e80;
+    blue:           #7fbbb3;
+    grey:           #83c092;
+    /* width: 600; */
+    rad: 12px;
+}
+
+/* vim:ft=css

@@ -5,13 +5,14 @@ alias nv="nvim"
 alias vim="nvim"
 alias vi="nvim"
 alias v="nvim"
-alias nightly="bob use nightly"
+alias nightly="bob install nightly"
 alias stable="bob use stable"
 alias nvimc="cd ~/.config/nvim/ && nvim"
 alias i3conf="zi i3 && nvim"
 alias rust_nightly="rustup update"
 alias nightky="bob use nightly"
 alias wezterm='flatpak run org.wezfurlong.wezterm'
+alias rel="xrdb merge ~/.Xresources && kill -USR1 $(pidof st)"
 
 # Cd into a dir
 alias usb="cd /run/media/bryant/CSF/"
@@ -55,6 +56,28 @@ function create_dir_and_cd() {
   fi
 }
 alias mkc="create_dir_and_cd "
+
+# Record your screen with ffmpeg
+# by siduck
+function ffmpeg_record() {
+  if [[ -z "$1" ]]; then
+    echo "Usage: rec <video name>"
+  else
+    ffmpeg -framerate 60 -f x11grab -i $DISPLAY  -pix_fmt yuv420p "$1".mp4
+  fi
+}
+alias rec="ffmpeg_record"
+
+# Record your screen with ffmpeg in high resolution
+# By siduck
+function ffmpeg_record_high_res() {
+  if [[ -z "$1" ]]; then
+    echo "Usage: rec_high <video name>"
+  else
+    ffmpeg -framerate 60 -f x11grab -i $DISPLAY -c:v libx264rgb -crf 0 -preset ultrafast -color_range 2 "$1".mp4
+  fi
+}
+alias rec_high="ffmpeg_record_high_res"
 
 alias ..="cd .."
 alias ...="cd ../.."
@@ -124,3 +147,6 @@ function extract() {
   fi
 }
 alias extr="extract "
+
+
+alias pipe="pipes.sh -t 0"

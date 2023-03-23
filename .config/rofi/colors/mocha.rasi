@@ -15,14 +15,14 @@
 * {
     background:     #1e1e2e;
     background-alt: #45475a;
-    foreground:     #cdd6f4;
-    selected:       #181825;
+    foreground:     #6c7086;
+    selected:       #313244;
     border-col:     #1e1e2e;
     active:         #a6e3a1;
     urgent:         #f38ba8;
     blue:           #89b4fa;
     grey:           #a6adc8;
-    width: 600;
+    /* width: 600; */
     rad: 12px;
 }
 

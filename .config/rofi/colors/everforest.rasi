@@ -6,11 +6,12 @@
  * Colors
  **/
 
+
 * {
-    background:     #323D43FF;
-    background-alt: #3C474DFF;
-    foreground:     #DAD1BEFF;
-    selected:       #7FBBB3FF;
-    active:         #A7C080FF;
-    urgent:         #E67E80FF;
+    background:     #1b2124;
+    background-alt: #5a5a58;
+    foreground:     #dad0bc;
+    selected:       #83c092;
+    active:         #83c092;
+    urgent:         #e67e80;
 }
