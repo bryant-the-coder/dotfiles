@@ -17,6 +17,9 @@ alias rel="xrdb merge ~/.Xresources && kill -USR1 $(pidof st)"
 # Cd into a dir
 alias usb="cd /run/media/bryant/CSF/"
 
+alias ts="tmux new-session -s"
+alias ta="tmux attach -t"
+
 # TMUX
 alias fun="ts fun"
 alias dev="ts dev"

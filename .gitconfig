@@ -11,6 +11,8 @@
 	ui = true
 [core]
 	editor = nvim
+    pager = delta
+
 [alias]
     master = !git fetch upstream && git merge upstream/master
     main = !git fetch upstream && git merge upstream/main
@@ -19,6 +21,16 @@
 	pr-clean = "!git for-each-ref refs/heads/pr/* --format=\"%(refname)\" | while read ref ; do branch=${ref#refs/heads/} ; git branch -D $branch ; done"
 [init]
     defaultBranch = main
+
+[delta]
+  line-numbers = true
+  syntax-theme = Catppuccin-mocha
+  side-by-side = false
+
+  file-modified-label = modified:
+
+[interactive]
+  diffFilter = delta --color-only
 
 ##### Github specific
 [github]
