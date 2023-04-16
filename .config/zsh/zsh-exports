@@ -13,6 +13,13 @@ export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOPATH/bin:/usr/local/go/bin
 
+# everblush
+# export FZF_DEFAULT_OPTS=" \
+# --color=bg+:#232a2d,bg:#141b1e,spinner:#e5c76b,hl:#e57474 \
+# --color=fg:#dadada,header:#e57474,info:#c47fd5,pointer:#e5c76b \
+# --color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#c47fd5,hl+:#f38ba8"
+
+# mocha
 export FZF_DEFAULT_OPTS=" \
 --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
 --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \

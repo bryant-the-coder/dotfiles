@@ -91,7 +91,7 @@ plugins=(
     pip
     poetry
     rust
-    # tmux
+    tmux
     zsh-autosuggestions
     fzf-tab
     web-search

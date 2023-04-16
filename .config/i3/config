@@ -1,7 +1,9 @@
 set $mod Mod4
+set $alt Mod1
 
 font pango:JetBrains Mono Medium Nerd Font Complete 9
 
+bindsym button3 floating toggle
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex-autostart --autostart --environment i3
@@ -29,16 +31,16 @@ floating_modifier $mod
 
 # Borders are nice lmao
 for_window [class="^.*"] border pixel 1
-# i3-gaps (you like men)
+
+# i3-gaps
 gaps inner 10
 gaps top 3
 gaps bottom 3
 gaps right 3
 gaps left 3
 default_border pixel 3
-default_floating_border pixel 3
-#hide_edge_borders smart
-# smart_gaps on
+
+focus_on_window_activation smart
 
 # class                 border  backgr. text    indicator child_border
 client.focused          #f5c2e7 #1e1e2e #cdd6f4 #f5e0dc   #f5c2e7
@@ -52,6 +54,8 @@ client.background       #1e1e2e
 title_align center
 focus_follows_mouse no
 
+# disable window icons for all windows
+for_window [all] title_window_icon off
 
 ##############
 # Workspaces #
@@ -133,7 +137,7 @@ exec_always --no-startup-id xrdb merge ~/dev/GITHUB/Clones/st/xresources
 # exec_always --no-startup-id ~/dev/GITHUB/Clones/xborder/xborders --border-radius 8 --border-red 137 --border-green 180 --border-blue 250 --border-width 2
 
 # Polybar
-exec_always --no-startup-id ~/.config/polybar/launch.sh
+# exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 # Discord
 # exec_always --no-startup-id ~/.config/scripts/launch_discord.sh
@@ -172,10 +176,17 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+x split h
+bindsym $mod+c split h
 
 # split in vertical orientation
 bindsym $mod+v split v
+
+# toggle between vertical and horizontal split
+bindsym $mod+t split toggle
+
+# toggle between stacking/tabbed/splith/splitv:
+bindsym $mod+Shift+x layout toggle splith splitv tabbed stacking 
+
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -194,6 +205,9 @@ bindsym $mod+space focus mode_toggle
 # focus the parent container
 bindsym $mod+a focus parent
 
+# cycle through workspaces
+bindsym $mod+b workspace back_and_forth
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
@@ -208,10 +222,10 @@ mode "resize" {
         bindsym j resize grow height 20 px or 5 ppt
         bindsym l resize grow width 20 px or 5 ppt
 
-        bindsym Left resize shrink width 10 px or 5 ppt
-        bindsym Up resize shrink height 10 px or 5 ppt
-        bindsym Down resize grow height 10 px or 5 ppt
-        bindsym Right resize grow width 10 px or 5 ppt
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
 
         # back to normal: Enter or Escape or $mod+r
         bindsym Return mode "default"
@@ -220,6 +234,58 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
+
+# Press $mod+Shift+g to enter the gap mode. Choose o or i for modifying outer/inner gaps. Press one of + / - (in-/decrement for current workspace) or 0 (remove gaps for current workspace). If you also press Shift with these keys, the change will be global for all workspaces.
+set $mode_gaps Gaps: (o) outer, (i) inner
+set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
+set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
+bindsym $mod+Shift+g mode "$mode_gaps"
+
+mode "$mode_gaps" {
+        bindsym o      mode "$mode_gaps_outer"
+        bindsym i      mode "$mode_gaps_inner"
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+mode "$mode_gaps_inner" {
+        bindsym plus  gaps inner current plus 5
+        bindsym minus gaps inner current minus 5
+        bindsym 0     gaps inner current set 0
+
+        bindsym Shift+plus  gaps inner all plus 5
+        bindsym Shift+minus gaps inner all minus 5
+        bindsym Shift+0     gaps inner all set 0
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+mode "$mode_gaps_outer" {
+        bindsym plus  gaps outer current plus 5
+        bindsym minus gaps outer current minus 5
+        bindsym 0     gaps outer current set 0
+
+        bindsym Shift+plus  gaps outer all plus 5
+        bindsym Shift+minus gaps outer all minus 5
+        bindsym Shift+0     gaps outer all set 0
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+mode "Move" {
+        # These bindings trigger as soon as you enter the Move mode
+
+        bindsym Left move left 20px
+        bindsym Down move down  20px
+        bindsym Up move up 20px
+        bindsym Right move right 20px
+
+        # back to normal: Enter or Escape or $mod+r
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $alt+m mode "default"
+}
+bindsym $alt+m mode "Move"
 
 # Starting a terminal
 bindsym $mod+Return exec kitty
@@ -255,3 +321,22 @@ bindsym $mod+slash exec "~/dev/PERSONAL/Fedora_stuff/splatmoji/splatmoji --disab
 bindsym $mod+z exec zeal
 bindsym $mod+ctrl+space exec "$HOME/.config/rofi/bin/book-search.sh"
 bindsym $mod+ctrl+b exec "$HOME/.config/rofi/bin/web-search.sh"
+
+bar {
+    status_command i3status
+    position top
+    font pango:Operator Mono SSm Lig Book 10
+    separator_symbol " | "
+    padding 2px 0
+    colors {
+            background #1e1e2e
+            statusline #cdd6f4
+            separator #585b70
+
+            focused_workspace  #74c7ec #3A6376 #cdd6f4
+            active_workspace   #313244 #5f676a #cdd6f4
+            inactive_workspace #313244 #222222 #a6adc8
+            urgent_workspace   #181825 #f38ba8 #cdd6f4
+            binding_mode       #181825 #f38ba8 #cdd6f4
+    }
+}
