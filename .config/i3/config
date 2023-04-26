@@ -126,7 +126,9 @@ exec_always feh --bg-fill ~/.config/wallpaper/nature/wallhaven-nk7zvm.png
 # exec_always nitrogen --restore &
 # Randomize wallpaper everytime on startup
 # exec_always feh --bg-fill --randomize ~/.config/wallpaper/dtos/
-exec_always --no-startup-id killall cava; exec ~/dev/GITHUB/Clones/i3bgwin/i3bgwin urxvt -depth 32 -bg '[00]black' --color6 '[50]cyan' +sb -embed {windowid} -e cava
+
+# this is for like bar thingy when there is sound
+# exec_always --no-startup-id killall cava; exec ~/dev/GITHUB/Clones/i3bgwin/i3bgwin urxvt -depth 32 -bg '[00]black' --color6 '[50]cyan' +sb -embed {windowid} -e cava
 
 # Starting docker
 # exec_always sudo systemctl start docker

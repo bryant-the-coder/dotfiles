@@ -153,3 +153,4 @@ alias extr="extract "
 
 
 alias pipe="pipes.sh -t 0"
+alias pip_upgrade="python3 -m pip install --upgrade pip"
